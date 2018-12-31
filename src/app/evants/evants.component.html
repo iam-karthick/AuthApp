@@ -1,0 +1,48 @@
+<nav *ngIf="auth.LoginUser()" class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Developer Db User</a>
+    <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <a class="btn btn-outline-primary btn-rnd" (click)="auth.LogoutUser()" >Sign out</a>
+        </li>
+    </ul>
+</nav>
+ <div class="card">
+  <div class="card-body">
+      <div class="row">
+          <div class="col-md-6">
+              <h4 class="form-section">
+                  <i class="ft-settings"></i>User List
+              </h4>
+          </div>
+          <div class="col-md-6">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <div class="document_table">
+                  <table class="table table-striped">
+                      <thead>
+                          <th width="30%">User ID</th>
+                          <th width="40%">User Name </th>
+                          <th width="40%">Designation</th>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let user of data; let i= index">
+                              <td>{{data[i].id}}</td>
+                              <td>{{data[i].name}}</td>
+                              <td>{{data[i].domain}}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form">
+      </div>
+    </div>
+  </div>
+</div>
